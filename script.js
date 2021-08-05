@@ -13,13 +13,13 @@ var textData = text.innerText;
 btn_toggle.onclick = () => {
   // your code here
   if (!toggle) {
-    var l = length.value
+    var leng = length.value
     var code = parseInt(author.innerText.split(" ")[0])
     var intcode =parseInt(code, 10);
-    var intl =parseInt(l, 10);
+    var intl =parseInt(leng, 10);
     var pp = intcode + intl
     console.log(pp)
-    author.innerText = code + l
+    author.innerText = code + leng
     btn_toggle.innerText = "Display Author"
     toggle = true
   }
@@ -33,13 +33,13 @@ btn_toggle.onclick = () => {
 search_btn.onclick = () => {
 
   text.innerText = textData
-  var l = length.value
+  var leng = length.value
   var words = text.innerText.split(" ")
   var selectword = []
   var color = document.querySelector("#color").value
 
   for (const word of words) {
-    if (word.length >= l)
+    if (word.length >= leng)
       selectword.push(word)
   }
   for (const word of selectword) {
